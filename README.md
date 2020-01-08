@@ -1,10 +1,20 @@
-# [Adobe Experience Manager Quickstart](https://aemboilerplate.com/)
+# [Cbus AEM Last minute Coding Test](https://www.cbussuper.com.au/)
 
-# Sample AEM project template
+# Coding Test Requirement
+The task is to create a simple AEM application that would get list of member data (First Name, Last Name, City) from a database (Eg: MySQL) and show that in the front-end as a table in a page.
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+- Please explain the AEM folder structure
+- Provide the sightly code for the front end component
+- Java code - service for querying the database and sending back to the front-end
+- Provide a small summary of steps of how you would be deploying the OSGi bundle with this java code.
+- Please write the necessary Unit Tests for the Java code that you are writing.
 
-## Modules
+# Disclaimer
+This is a last minute coding test requirement, I dont have AEM installed in my local machine. Hence I can really do much testing.
+However I will try my best to write the code in VSCode to express how I tackle the problem and provide the solution.
+
+
+## Project Modules Setup 
 
 The main parts of the template are:
 
@@ -56,4 +66,4 @@ The project comes with the auto-public repository configured. To setup the repos
     http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
 
 ## Contact
-
+@seabookchen
