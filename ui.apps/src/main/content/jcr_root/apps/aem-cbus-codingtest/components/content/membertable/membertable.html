@@ -1,0 +1,62 @@
+<script>
+    $(document).ready(function () {
+        var table = $('#myTable').DataTable();
+
+        $('#submit').click(function () {
+            //Use JQuery AJAX request to post data to a Sling Servlet
+            $.ajax({
+                type: 'GET',
+                url: '/bin/myMemberData',
+                data: 'type=' + 'data',
+                success: function (msg) {
+                    var xml = msg;
+
+                    // use some table api to manipulate the tables
+                    var oTable = $('#myTable').dataTable();
+                    oTable.fnClearTable(true);
+
+                    //Loop through this function for each Employee element
+                    //in the returned XML
+                    $(xml).find('Employee').each(function () {
+
+                        var $field = $(this);
+                        var firstName = $field.find('firstName').text();
+                        var lastName = $field.find('lastName').text();
+                        var city = $field.find('city').text();
+
+                        //Set the new data 
+                        oTable.fnAddData([
+                            firstName,
+                            lastName,
+                            city,
+                        ]);
+                    });
+                }
+            });
+        });
+
+    });
+</script>
+
+<div>
+    <table id="myTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Seabook</td>
+                <td>Chent</td>
+                <td>Melbourne</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <input type="button" value="Submit" name="submit" id="submit" value="Get Members">
+        </tfoot>
+    </table>
+
+</div>

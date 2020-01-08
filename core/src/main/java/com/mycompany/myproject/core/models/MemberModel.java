@@ -15,34 +15,34 @@
  */
 package com.mycompany.myproject.core.models;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import javax.inject.Named;
+public class MemberModel {
 
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.settings.SlingSettingsService;
+    private String firstName;
+    private String lastName;
+    private String city;
 
-@Model(adaptables=Resource.class)
-public class HelloWorldModel {
-
-    @Inject
-    private SlingSettingsService settings;
-
-    @Inject @Named("sling:resourceType") @Default(values="No resourceType")
-    protected String resourceType;
-
-    private String message;
-
-    @PostConstruct
-    protected void init() {
-        message = "\tHello World!\n";
-        message += "\tThis is instance: " + settings.getSlingId() + "\n";
-        message += "\tResource type is: " + resourceType + "\n";
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getMessage() {
-        return message;
+    public String getFirstName() {
+        return this.firstName;
     }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName(String lastName) {
+        return this.lastName;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity(String city) {
+        return this.city;
+    }
+
 }

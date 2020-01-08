@@ -14,8 +14,18 @@ This is a last minute coding test requirement, I dont have AEM installed in my l
 In latest year 2019, I was working on spring boot + reactjs project, hadn't touch AEM for one more year.
 However I will try my best to write the code in VSCode in short period of time to express how I tackle the problem and provide the solution at my absolute best.
 
+# Solution Walk through
+ - If you want to access data from mysql, out of box, you can use AEM DataSourcePool osgi bundle service to setup a connection to mysql
+ - Then you can use Java JDBC API to perform database operations, such as executing a query
+ - You could use maven achetype to generate the boilerplate code.
+ - In the java core module directory, we will write our member models, jdbc api implementation and using sling simple servlet for the frontend to retrieve the infomation (All these will be refelected in the code, build and deployed as osgi bundle)
+ - In the service part, the ticky bit is need to serialize the object by using xml 
+ - Then you need to deploy the bundle to AEM containing mysql-connector-jar file, this might be tricky
+ - OSGI part is always tricky sometimes, it might require modify pom files.
+ - front end part should reside under ui.apps/ modules apps/aem-cbus-codingtest/components/content/membertable
 
-## Project Modules Setup 
+
+## Project folder structure explaination 
 
 The main parts of the template are:
 
