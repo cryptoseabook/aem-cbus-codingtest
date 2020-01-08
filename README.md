@@ -42,10 +42,11 @@ The main parts of the template are:
 - Go to http://localhost:4502/system/console/bundles to check your bundle is there and work properly
 - most of the time if you want to add third party jars, osgi bundle become difficult due to some jar version conflicts.
 
-# Again, why hire me? 
+# Last, Why hire me?
 - I want to stress that my absolute strength is I have loads expierences in various area
-- I can stich different pieces of technologies together provide a sounding solution
+- I can stitch different pieces of technologies together provide a sounding solution for the business
 - I can fairly quickly pick up any new techs
+- hands on coder.
 
 
 Thanks for your time.
