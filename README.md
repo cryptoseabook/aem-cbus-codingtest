@@ -11,15 +11,15 @@ The task is to create a simple AEM application that would get list of member dat
 
 # Disclaimer
 This is a last minute coding test requirement, I dont have AEM installed in my local machine. Hence I cannot really do much testing in the aem site. 
-In latest year 2019, I was working on spring boot + reactjs project, hadn't touch AEM for one more year.
+Also in the last year 2019, I was working on spring boot + reactjs project, hadn't touch AEM for one more year.
 However I will try my best to write the code in VSCode in short period of time to express how I tackle the problem and provide the solution at my absolute best.
 
 # Solution Walk through
  - If you want to access data from mysql, out of box, you can use AEM DataSourcePool osgi bundle service to setup a connection to mysql
  - Then you can use Java JDBC API to perform database operations, such as executing a query
- - You could use maven achetype to generate the boilerplate code.
+ - You could use maven achetype to generate the aem boilerplate code.
  - In the java core module directory, we will write our member models, jdbc api implementation and using sling simple servlet for the frontend to retrieve the infomation (All these will be refelected in the code, build and deployed as osgi bundle)
- - In the service part, the ticky bit is need to serialize the object by using xml 
+ - In the service part, the ticky bit is need to serialize the object by using xml parser. 
  - Then you need to deploy the bundle to AEM containing mysql-connector-jar file, this might be tricky
  - OSGI part is always tricky sometimes, it might require modify pom files.
  - front end part should reside under ui.apps/ modules apps/aem-cbus-codingtest/components/content/membertable
@@ -40,6 +40,15 @@ The main parts of the template are:
 - make nessary changes in your pom files, this might be tricky
 - `mvn clean install -P autoInstallBundle` to create and deploy the bundle
 - Go to http://localhost:4502/system/console/bundles to check your bundle is there and work properly
+- most of the time if you want to add third party jars, osgi bundle become difficult due to some jar version conflicts.
+
+# Again, why hire me? 
+- I want to stress that my absolute strength is I have loads expierences in various area
+- I can stich different pieces of technologies together provide a sounding solution
+- I can fairly quickly pick up any new techs
+
+
+Thanks for your time.
 
 
 ## Contact
