@@ -10,8 +10,9 @@ The task is to create a simple AEM application that would get list of member dat
 - Please write the necessary Unit Tests for the Java code that you are writing.
 
 # Disclaimer
-This is a last minute coding test requirement, I dont have AEM installed in my local machine. Hence I can really do much testing.
-However I will try my best to write the code in VSCode to express how I tackle the problem and provide the solution.
+This is a last minute coding test requirement, I dont have AEM installed in my local machine. Hence I cannot really do much testing in the aem site. 
+In latest year 2019, I was working on spring boot + reactjs project, hadn't touch AEM for one more year.
+However I will try my best to write the code in VSCode in short period of time to express how I tackle the problem and provide the solution at my absolute best.
 
 
 ## Project Modules Setup 
