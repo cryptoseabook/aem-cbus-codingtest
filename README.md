@@ -25,7 +25,7 @@ However I will try my best to write the code in VSCode in short period of time t
  - front end part should reside under ui.apps/ modules apps/aem-cbus-codingtest/components/content/membertable
 
 
-## Project folder structure explaination 
+# Project folder structure 
 
 The main parts of the template are:
 
@@ -34,6 +34,13 @@ The main parts of the template are:
 * ui.content: contains sample content using the components from the ui.apps
 * ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
 * ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
+
+# Deploy the OSGi bundle with java code
+- Make sure your code is complied and build properly
+- make nessary changes in your pom files, this might be tricky
+- `mvn clean install -P autoInstallBundle` to create and deploy the bundle
+- Go to http://localhost:4502/system/console/bundles to check your bundle is there and work properly
+
 
 ## Contact
 @seabookchen
